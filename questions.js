@@ -66,20 +66,7 @@ module.exports = {
       message: "What is the eigneers github?",
     },
   ],
-
-  // .then((orange => {
-  //   employee.push(
-  //     new this.managerQuestions(
-  //       orange.Name,
-  //       orange.Id,
-  //       orange.Email,
-  //       orange.GitHub
-  //     )
-  //   );
-  //   console.log(team);
-  //   managerQuestions();
-  // });
-
+  //
   internQuestions: [
     {
       type: "input",
@@ -122,5 +109,21 @@ module.exports = {
     message: "Would you like to add another employee?",
     choices: ["Yes", "No"],
   },
+
+  // if (answer.end === "Yes"), {
+  //   //fire the ask manager questions
+  //   firstQuestionFunc();
+  // } else if (answer.end === "No") {
+  //   generateHTML();
+  //   }
+
+  // endQuestion: {
+  //   //inquirer.prompt(endQuestion).then((answer) => {
+  //     if (answer.role === "Yes") {
+  //       //fire the ask manager questions
+  //       firstQuestionsFunc();
+  //     } else if (answer.role === "No") {
+  //       //fire the ask engineer questions
+  //       generateHTML();
 };
-//generateHTML;
+//
