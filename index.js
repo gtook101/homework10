@@ -46,15 +46,87 @@ function internQuestionsFunc() {
   inquirer.prompt(internQuestions).then((answers) => {
     console.log(answers);
     endQuestionFunc();
+    // class Intern extends Employee {
+    //   constructor(role, name, id, email, school) {
+    //     super(role, name, id, email, school);
+    //     this.role = role;
+    //     this.name = name;
+    //     this.id = id;
+    //     this.email = email;
+    //     this.school = school;
+    //   }
+    // }
+
+    // getRole();
+    // getName();
+    // getId();
+    // getEmail();
+    // getSchool();
+
+    // const intern = new Intern(role, name, id, email, school);
+
+    // module.exports = Employee;
   });
+  // class Intern extends Employee {
+  //   constructor(role, name, id, email, school) {
+  //     super(role, name, id, email, school);
+  //     this.role = role;
+  //     this.name = name;
+  //     this.id = id;
+  //     this.email = email;
+  //     this.school = school;
+  //   }
+  // }
+
+  // getRole();
+  // getName();
+  // getId();
+  // getEmail();
+  // getSchool();
+
+  // const intern = new Intern(role, name, id, email, school);
+
+  // module.exports = Employee;
 }
+// class Intern extends Employee {
+//   constructor(role, name, id, email, school) {
+//     super(role, name, id, email, school);
+//     this.role = role;
+//     this.name = name;
+//     this.id = id;
+//     this.email = email;
+//     this.school = school;
+//   }
+// }
+
+// getRole();
+// getName();
+// getId();
+// getEmail();
+// getSchool();
+
+// const intern = new Intern(role, name, id, email, school);
+
+// module.exports = Employee;
+// const endQuestionFunc = () => {
+//   inquirer.prompt(endQuestion).then((answer) => {
+// if (answer.end === "Yes") {
+// fire the ask manager questions
+// firstQuestionFunc();
+// } else {
+// fire the ask engineer questions
+// generateHTML();
+// }
+//   });
+// };
 
 function endQuestionFunc() {
   inquirer.prompt(endQuestion).then((answers) => {
     if (answers.end === "Yes") {
       firstQuestionFunc();
+    } else if (answers.end === "No") {
+      generateHTML();
     }
-    generateHTML();
   });
 }
 
@@ -78,7 +150,7 @@ const generateHTML = (answers) => {
   <div class="row">
   <div class="column">
     <div class="card">
-      <h3>${answers.role}</h3>
+      // <h3>Hello World</h3>
       <h3>${answers.name}</h3>
       <p>${answers.id}</p>
       <p>${answers.email}</p>
@@ -92,7 +164,7 @@ const generateHTML = (answers) => {
       <h3>${answers.name}</h3>
       <p>${answers.id}</p>
       <p>${answers.email}</p>
-      <p>${github}</p>
+      <p>${answers.github}</p>
     </div>
   </div>
 
@@ -102,7 +174,7 @@ const generateHTML = (answers) => {
       <h3>${answers.name}</h3>
       <p>${answers.id}</p>
       <p>${answers.email}</p>
-      <p>${github}</p>
+      <p>${answers.github}</p>
     </div>
   </div>
 
@@ -115,7 +187,7 @@ const generateHTML = (answers) => {
       <h3>${answers.name}</h3>
       <p>${answers.id}</p>
       <p>${answers.email}</p>
-      <p>${school}</p>
+      <p>${answers.school}</p>
     </div>
   </div>
 
@@ -125,7 +197,7 @@ const generateHTML = (answers) => {
       <h3>${answers.name}</h3>
       <p>${answers.id}</p>
       <p>${answers.email}</p>
-      <p>${school}</p>
+      <p>${answers.school}</p>
     </div>
 
   </div>
